@@ -1,0 +1,28 @@
+# Installation guide
+## /!\ You need to have the npm binary in your $PATH (The npm binary is located in the root folder of the archive)
+
+## Server
+1. "cd server"
+2. "npm install"
+3. "npm install -g forever"
+4. create and edit keys.env, then write:
+SPOTIFY_ID=<SPOTIFY_ID>
+SPOTIFY_SECRET=<SPOTIFY_SECRET>
+EVENTFUL=<EVENTFUL_KEY>
+DATABASE=mongodb://<MONGODB_IP:MONGOGB_PORT>/festivaldb
+
+## /!\ The database line is usually written on VM startup via userdata.
+
+5. To start: "forever start start.js"
+
+## /!\ The server runs on port 3000
+
+## Client 
+1. "cd client"
+2. "npm install"
+3. "npm install -g forever"
+4. create and edit keys.env, then write 'GMAP=<YOUR_GOOGLE_MAP_KEY>'
+5. To start: "forever start start.js --serverPublic=http://<SERVER_IP>:<SERVER_PORT>"
+
+## /!\ The client runs on port 8080
+

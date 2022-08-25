@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Festiv.al</title>
+    <link rel="stylesheet" href="/material/material-components-web.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/material/material-components-web.min.js"></script>
+    <script type="text/javascript">const baseURL = "";</script>
+    <script>window.mdc.autoInit();</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body class="mdc-typography">
+    <header class="mdc-toolbar mdc-toolbar--fixed">
+      <div class="mdc-toolbar__row">
+        <section class="mdc-toolbar__section mdc-toolbar__section--align-start"><a class="material-icons mdc-toolbar__menu-icon mdc-toolbar__title" href="/">home</a><span class="mdc-toolbar__title">Festiv.al</span></section>
+      </div>
+    </header>
+    <div class="mdc-toolbar-fixed-adjust"><br>
+      <div class="mdc-textfield mdc-textfield--fullwidth">
+        <input class="mdc-textfield__input" type="text" placeholder="Search location" aria-label="Search location" id="searchBar">
+        <div class="mdc-textfield__bottom-line"></div>
+      </div><br>
+      <div id="map"></div>
+      <div class="mdc-linear-progress" role="progressbar" id="progressBar">
+        <div class="mdc-linear-progress__buffering-dots"></div>
+        <div class="mdc-linear-progress__buffer"></div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__primary-bar"><span class="mdc-linear-progress__bar-inner"></span></div>
+        <div class="mdc-linear-progress__bar mdc-linear-progress__secondary-bar"><span class="mdc-linear-progress__bar-inner"></span></div>
+      </div>
+      <div class="mdc-card nowPlayingCard">
+        <section class="mdc-card__media mdc-card__media__now-playing" id="songCover"></section>
+        <section class="mdc-card__primary">
+          <h1 class="mdc-card__title mdc-card__title--large" id="songTitle">Nothing played yet</h1>
+          <h2 class="mdc-card__subtitle" id="songArtists"></h2>
+        </section>
+        <section class="mdc-card__actions">
+          <button class="mdc-button mdc-button--compact mdc-card__action" disabled id="stopButton"></button>
+        </section>
+      </div>
+      <audio id="preview" src=""></audio>
+      <script src="/scripts/music.js"></script>
+      <script src="/scripts/map.js"></script>
+      <script src="/scripts/materialCalls.js"></script>
+      <script src="/scripts/oms.min.js"></script>
+      <script src="/scripts/markerclusterer.js"></script>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCGWyQAtV9G8oC7TcjNWJp0ZjRc1NSGj2w&amp;callback=initMap&amp;libraries=places"></script>
+      <script src="/scripts/searchAutoComplete.js"></script>
+    </div>
+  </body>
+</html>
